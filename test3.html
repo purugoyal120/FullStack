@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Spider-Man Villains</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #080808;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        /* ---------- Heading ---------- */
+
+        .heading {
+            height: 180px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+        }
+
+        .heading h1 {
+            font-size: 48px;
+            color: #e62429;
+        }
+
+        .heading p {
+            margin-top: 10px;
+            color: #aaa;
+            font-size: 18px;
+        }
+
+
+        /* ---------- Horizontal Scroll ---------- */
+
+        .slider {
+            display: flex;
+
+            width: 100%;
+            height: 650px;
+
+            overflow-x: auto;
+            overflow-y: hidden;
+
+            scroll-snap-type: x mandatory;
+
+            padding: 20px 5vw 50px;
+
+            scrollbar-width: none;
+        }
+
+        .slider::-webkit-scrollbar {
+            display: none;
+        }
+
+
+        /* ---------- Card ---------- */
+
+        .card {
+            flex: 0 0 90vw;
+
+            max-width: 1400px;
+            height: 580px;
+
+            position: relative;
+
+            margin-right: -180px;
+
+            border-radius: 25px;
+
+            overflow: hidden;
+
+            scroll-snap-align: start;
+
+            background: #151515;
+
+            border: 2px solid #222;
+
+            box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+
+            transition: transform 0.3s ease;        
+        }
+
+
+        /* Card layering */
+
+        .card:nth-child(1) {
+            z-index: 1;
+        }
+
+        .card:nth-child(2) {
+            z-index: 2;
+        }
+
+        .card:nth-child(3) {
+            z-index: 3;
+        }
+
+        .card:nth-child(4) {
+            z-index: 4;
+        }
+
+        .card:nth-child(5) {
+            z-index: 5;
+        }
+
+
+        /* ---------- Image ---------- */
+
+        .card img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+        }
+
+
+        /* ---------- Dark Gradient ---------- */
+
+        .card::after {
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            bottom: 0;
+
+            width: 100%;
+            height: 65%;
+
+            background: linear-gradient(
+                transparent,
+                rgba(0, 0, 0, 0.95)
+            );
+
+            pointer-events: none;
+        }
+
+
+        /* ---------- Content ---------- */
+
+        .content {
+            position: absolute;
+
+            left: 0;
+            bottom: 0;
+
+            width: 100%;
+
+            padding: 45px;
+
+            z-index: 10;
+        }
+
+        .number {
+            color: #e62429;
+
+            font-size: 14px;
+
+            font-weight: bold;
+
+            letter-spacing: 4px;
+
+            margin-bottom: 12px;
+        }
+
+        .content h2 {
+            font-size: 48px;
+
+            margin-bottom: 12px;
+        }
+
+        .content p {
+            max-width: 700px;
+
+            color: #ddd;
+
+            font-size: 18px;
+
+            line-height: 1.6;
+        }
+
+
+        /* ---------- Mobile ---------- */
+
+        @media (max-width: 600px) {
+
+            .heading {
+                height: 160px;
+            }
+
+            .heading h1 {
+                font-size: 30px;
+            }
+
+            .heading p {
+                font-size: 14px;
+            }
+
+            .slider {
+                height: 540px;
+
+                padding-left: 4vw;
+                padding-right: 4vw;
+            }
+
+            .card {
+                flex: 0 0 92vw;
+
+                height: 480px;
+
+                margin-right: -100px;
+
+                border-radius: 18px;
+            }
+
+            .content {
+                padding: 25px;
+            }
+
+            .content h2 {
+                font-size: 32px;
+            }
+
+            .content p {
+                font-size: 14px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- Heading -->
+
+    <div class="heading">
+
+        <h1>SPIDER-MAN VILLAINS</h1>
+
+        <p>Scroll horizontally to discover the enemies</p>
+
+    </div>
+
+
+
+    <!-- Cards -->
+
+    <div class="slider">
+
+
+        <!-- Card 1 -->
+
+        <div class="card">
+
+            <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvoESJAxAZxhbAns3dRmmCwrK3RF2tUtQTML7jgUcbJw&s=10"
+                alt="Green Goblin"
+            >
+
+            <div class="content">
+
+                <div class="number">
+                    VILLAIN 01
+                </div>
+
+                <h2>
+                    Green Goblin
+                </h2>
+
+                <p>
+                    Norman Osborn is one of Spider-Man's most
+                    dangerous enemies, using advanced technology
+                    and his deadly glider to fight Spider-Man.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Card 2 -->
+
+        <div class="card">
+
+            <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVwIa3rkfeDRUsDhYjg2hsz-5oTjKCC521ZFMsgZwIW94f-qyOXMG_X670&s=10"
+                alt="Venom"
+            >
+
+            <div class="content">
+
+                <div class="number">
+                    VILLAIN 02
+                </div>
+
+                <h2>
+                    Venom
+                </h2>
+
+                <p>
+                    Venom is a powerful symbiote that gives its
+                    host incredible strength, speed and abilities.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Card 3 -->
+
+        <div class="card">
+
+            <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-zXcQ58BYuPwpt5MSuI2OHhM8CJ1zvWWDMiCVkAjyTpRXhDMgl-1z_R-l&s=10"
+                alt="Doctor Octopus"
+            >
+
+            <div class="content">
+
+                <div class="number">
+                    VILLAIN 03
+                </div>
+
+                <h2>
+                    Doctor Octopus
+                </h2>
+
+                <p>
+                    Doctor Octopus is a brilliant scientist who
+                    uses powerful mechanical arms as weapons.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Card 4 -->
+
+        <div class="card">
+
+            <img
+                src="https://upload.wikimedia.org/wikipedia/en/thumb/8/83/Electro_%28Dillon%29.jpg/250px-Electro_%28Dillon%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+                alt="Electro"
+            >
+
+            <div class="content">
+
+                <div class="number">
+                    VILLAIN 04
+                </div>
+
+                <h2>
+                    Electro
+                </h2>
+
+                <p>
+                    Electro can generate and control electricity,
+                    making him a powerful enemy of Spider-Man.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Card 5 -->
+
+        <div class="card">
+
+            <img
+                src="https://cdn.marvel.com/content/2x/msm2_launch_sandman_4k_legal_2023.webp"
+                alt="Sandman"
+            >
+
+            <div class="content">
+
+                <div class="number">
+                    VILLAIN 05
+                </div>
+
+                <h2>
+                    Sandman
+                </h2>
+
+                <p>
+                    Sandman can transform his body into sand
+                    and manipulate its shape and strength.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</body>
+</html>

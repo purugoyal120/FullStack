@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Web Page</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            background:black;
+            font-family:Arial, sans-serif;
+        }
+
+        .container{
+            width:350px;
+            margin:50px auto;
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            text-align:center;
+        }
+
+        h1{
+            margin-bottom:15px;
+        }
+
+        img{
+            width:100%;
+            border-radius:10px;
+        }
+
+        p{
+            margin-top:15px;
+            line-height:1.5;
+            p:has(span){
+                color:green;
+            }
+        }
+        p:has(span){
+                color:green;
+            }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Nature</h1>
+
+        
+
+        <p>
+
+          <span> Nature is beautiful and peaceful. It gives us fresh air,
+            clean water, and a healthy environment. We should protect
+            nature for a better future.</span>
+        </p>
+
+    </div>
+<input type="checkbox" id="toggle">
+<label for="toggle">Toggle</label>
+</body>
+</html>
+
